@@ -1,8 +1,8 @@
 import 'package:easytrash/user/view/auth/signup.dart';
-import 'package:easytrash/user/view/onboarding/widgets/dotsindicator.dart';
-import 'package:easytrash/user/view/onboarding/widgets/screen1.dart';
-import 'package:easytrash/user/view/onboarding/widgets/screen2.dart';
-import 'package:easytrash/user/view/onboarding/widgets/screen3.dart';
+import 'package:easytrash/core/widgets/onboarding/widgets/dotsindicator.dart';
+import 'package:easytrash/core/widgets/onboarding/widgets/screen1.dart';
+import 'package:easytrash/core/widgets/onboarding/widgets/screen2.dart';
+import 'package:easytrash/core/widgets/onboarding/widgets/screen3.dart';
 import 'package:flutter/material.dart';
 
 class PageScreen extends StatefulWidget {
@@ -55,7 +55,7 @@ class _PageScreenState extends State<PageScreen> {
                       Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => SignUp()));
+                              builder: (context) => const SignUp()));
                     },
                     child: const Text(
                       'Skipp >>',
@@ -78,8 +78,8 @@ class _PageScreenState extends State<PageScreen> {
                     },
                     style: ButtonStyle(
                       backgroundColor:
-                          MaterialStateProperty.all<Color>(Colors.black),
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                          WidgetStateProperty.all<Color>(Colors.black),
+                      shape: WidgetStateProperty.all<RoundedRectangleBorder>(
                         RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20.0),
                         ),
@@ -97,12 +97,11 @@ class _PageScreenState extends State<PageScreen> {
               visible: currentPage == 2,
               child: ElevatedButton(
                 onPressed: () {
-                  Navigator.of(context)
-                      .push(MaterialPageRoute(builder: (context) => SignUp()));
+                  Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => const SignUp()));
                 },
                 style: ButtonStyle(
-                  backgroundColor:
-                      WidgetStateProperty.all<Color>(Colors.black),
+                  backgroundColor: WidgetStateProperty.all<Color>(Colors.black),
                   shape: WidgetStateProperty.all<RoundedRectangleBorder>(
                     RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20.0),

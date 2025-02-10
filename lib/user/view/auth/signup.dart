@@ -1,4 +1,4 @@
-import 'package:easytrash/user/model/auth_service.dart';
+import 'package:easytrash/user/services/auth_service.dart';
 import 'package:easytrash/user/view/auth/signin.dart';
 import 'package:easytrash/user/view/auth/widgets.dart';
 import 'package:easytrash/user/view/home/home.dart';
@@ -128,7 +128,7 @@ class _SignUpState extends State<SignUp> {
                     GestureDetector(
                       onTap: () {
                         Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => const SignIn()));
+                            builder: (context) => SignIn()));
                       },
                       child: RichText(
                         text: const TextSpan(

@@ -45,7 +45,9 @@ class MyDrawerContainer extends StatelessWidget {
                 color: Colors.black,
                 size: 30,
               ),
-              onTap: () {},
+              onTap: () {
+                aboutUsPopUp(context);
+              },
             ),
             ListTile(
               title: const Text(
@@ -110,14 +112,14 @@ class MyDrawerContainer extends StatelessWidget {
   aboutUsPopUp(BuildContext context) {
     final widthDsp = MediaQuery.of(context).size.width;
     final heightDsp = MediaQuery.of(context).size.height;
-    showAboutDialog(
+    return showAboutDialog(
         context: context,
         applicationIcon: Container(
           height: heightDsp * 0.09,
           width: widthDsp * 0.18,
           decoration: const BoxDecoration(
             image: DecorationImage(
-                image: AssetImage('assets/logo.png'), fit: BoxFit.cover),
+                image: AssetImage('assets/green_logo.png'), fit: BoxFit.cover),
             borderRadius: BorderRadius.all(Radius.circular(10)),
           ),
         ),

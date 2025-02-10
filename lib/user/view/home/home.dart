@@ -1,4 +1,4 @@
-import 'package:easytrash/user/view/home/drawer.dart';
+import 'package:easytrash/user/view/home/drawer/drawer.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {

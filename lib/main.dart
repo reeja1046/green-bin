@@ -1,5 +1,5 @@
 import 'package:easytrash/firebase_options.dart';
-import 'package:easytrash/user/view/splash.dart';
+import 'package:easytrash/core/widgets/splash.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 

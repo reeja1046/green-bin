@@ -1,4 +1,4 @@
-import 'package:easytrash/user/view/onboarding/pageview.dart';
+import 'package:easytrash/core/widgets/onboarding/pageview.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -9,14 +9,8 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-  Future gotoNext() async {
-    await Future.delayed(const Duration(seconds: 3));
-    // ignore: use_build_context_synchronously
-    Navigator.of(context)
-        .pushReplacement(MaterialPageRoute(builder: (context) => const PageScreen()));
-  }
-
-  @override
+ 
+ @override
   void initState() {
     super.initState();
     gotoNext();
@@ -36,5 +30,12 @@ class _SplashScreenState extends State<SplashScreen> {
         ),
       ),
     );
+  }
+
+   Future gotoNext() async {
+    await Future.delayed(const Duration(seconds: 3));
+    // ignore: use_build_context_synchronously
+    Navigator.of(context)
+        .pushReplacement(MaterialPageRoute(builder: (context) => const PageScreen()));
   }
 }

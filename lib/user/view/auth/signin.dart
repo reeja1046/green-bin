@@ -1,10 +1,14 @@
+import 'package:easytrash/user/services/auth_service.dart';
 import 'package:easytrash/user/view/auth/signup.dart';
 import 'package:easytrash/user/view/home/home.dart';
 import 'package:flutter/material.dart';
 
 class SignIn extends StatelessWidget {
-  const SignIn({super.key});
+  SignIn({super.key});
 
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
+  final FirebaseAuthService auth = FirebaseAuthService();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,6 +41,7 @@ class SignIn extends StatelessWidget {
                 borderRadius: BorderRadius.circular(20.0),
               ),
               child: TextFormField(
+                controller: emailController,
                 decoration: const InputDecoration(
                   border: InputBorder.none,
                 ),
@@ -56,6 +61,7 @@ class SignIn extends StatelessWidget {
                 borderRadius: BorderRadius.circular(20.0),
               ),
               child: TextFormField(
+                controller: passwordController,
                 obscureText: true,
                 decoration: const InputDecoration(
                   border: InputBorder.none,
@@ -67,7 +73,9 @@ class SignIn extends StatelessWidget {
               child: Column(
                 children: [
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      userSignUp(context);
+                    },
                     style: ButtonStyle(
                       backgroundColor:
                           WidgetStateProperty.all<Color>(Colors.green),
@@ -111,5 +119,21 @@ class SignIn extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  void userSignUp(context) async {
+    String password = passwordController.text;
+    String email = emailController.text;
+
+    var user = await auth.signInWithEmailAndPassword(email, password);
+    if (user != null) {
+      print('User is successfully signed in');
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (context) => HomeScreen()),
+      );
+    } else {
+      print('Some error occurred');
+    }
   }
 }

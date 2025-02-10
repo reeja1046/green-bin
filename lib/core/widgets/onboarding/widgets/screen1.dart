@@ -1,8 +1,8 @@
-import 'package:easytrash/user/view/onboarding/widgets/widgets.dart';
+import 'package:easytrash/core/widgets/onboarding/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
-class OnBoardingScreenTwo extends StatelessWidget {
-  const OnBoardingScreenTwo({super.key});
+class OnBoardingScreenOne extends StatelessWidget {
+  const OnBoardingScreenOne({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,11 +15,11 @@ class OnBoardingScreenTwo extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 OnBoardWidget(
-                  imagePath: 'assets/onboarding2.jpg',
-                  title1: 'Clean Environment, Easy Pickup',
-                  description1: 'With Green Bin, managing waste',
-                  description2: 'is simple and convenient,',
-                  description3: ' right from your home.',
+                  imagePath: 'assets/onboarding1.jpg',
+                  title1: 'Effortless Waste Disposal',
+                  description1: 'Welcome to Green Bin, where',
+                  description2: 'eco-friendly waste management',
+                  description3: 'starts at your doorstep.',
                 )
               ],
             ),
