@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "257099322914",
+    "project_id": "greenbin-a6830",
+    "storage_bucket": "greenbin-a6830.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:257099322914:android:0cc505d435023405849c7b",
+        "android_client_info": {
+          "package_name": "com.example.easytrash"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEbutBaUXrk6CL7659c7mnO8cNqoc2uQo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
